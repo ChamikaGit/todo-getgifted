@@ -1,6 +1,6 @@
 # Todo App - Android
 
-A simple and clean Todo application built with Android using MVVM architecture. This app allows users to view and manage their todo items with offline support.
+A simple and clean Todo application built with Android using MVVM architecture and Jetpack Compose. This app allows users to view and manage their todo items with offline support.
 
 ## Architecture
 
@@ -18,8 +18,9 @@ app/src/main/java/com/getgifted/todoapp/
 │   └── utils/          # Utility classes
 ├── di/                 # Dependency injection modules
 └── ui/
-    ├── adapter/        # RecyclerView adapters
-    ├── fragments/      # UI fragments
+    ├── navigation/     # Navigation graph
+    ├── screens/        # Composable screens
+    ├── theme/          # Material3 theme
     └── viewmodel/      # ViewModels
 ```
 
@@ -37,13 +38,12 @@ app/src/main/java/com/getgifted/todoapp/
 
 ### Core Android
 - **Kotlin** - Programming language
-- **ViewBinding** - View access without findViewById
+- **Jetpack Compose** - Modern toolkit for building native UI
 
 ### Architecture Components
 - **ViewModel** - Manage UI-related data lifecycle
-- **LiveData** - Observable data holder
 - **Room Database** - Local data persistence
-- **Navigation Component** - Fragment navigation
+- **Navigation Compose** - Navigation for Compose
 
 ### Dependency Injection
 - **Hilt** - Dependency injection framework
@@ -58,9 +58,8 @@ app/src/main/java/com/getgifted/todoapp/
 - **Flow** - Reactive data streams
 
 ### UI Components
-- **RecyclerView** - List display
-- **SwipeRefreshLayout** - Pull to refresh
-- **Material Design Components** - UI components
+- **Material3** - Material Design 3 components
+- **LazyColumn** - Efficient list display
 
 ## Requirements
 
@@ -86,6 +85,3 @@ The app fetches todo data from: `https://jsonplaceholder.typicode.com/todos`
 ./gradlew build
 ```
 
-## License
-
-This project is created for learning purposes.

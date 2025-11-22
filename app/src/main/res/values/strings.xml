@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GiftedTODO XML</string>
+    <string name="app_name">GiftedTODO Compose</string>
     <string name="completed_status">Completed status</string>
     <string name="todo_id">Todo ID</string>
     <string name="title">Title</string>
