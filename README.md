@@ -4,7 +4,12 @@ A simple and clean Todo application built with Android using MVVM architecture. 
 
 ## Architecture
 
-This project follows the **MVVM (Model-View-ViewModel)** architecture pattern, which provides a clean separation of concerns and makes the code more maintainable and testable.
+This project follows the **MVVM (Model-View-ViewModel)** architecture pattern, which provides a clean separation of concerns and makes the code more 
+maintainable and testable.
+
+## Project Demo
+
+https://github.com/user-attachments/assets/0d23c80d-98ff-4a0f-a065-f7d946779b6f
 
 ## Project Structure
 
