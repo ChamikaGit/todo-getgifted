@@ -1,4 +1,4 @@
-package com.getgifted.todo
+package com.getgifted.todoapp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
