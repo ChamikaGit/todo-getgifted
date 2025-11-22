@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">GetGiftedTodoApp</string>
+    <string name="app_name">GiftedTODO XML</string>
+    <string name="completed_status">Completed status</string>
+    <string name="todo_id">Todo ID</string>
+    <string name="title">Title</string>
+    <string name="user_id">User ID</string>
+    <string name="status">Status</string>
+    <string name="completed">Completed</string>
+    <string name="not_completed">Not Completed</string>
+    <string name="loading">Loading...</string>
+    <string name="error_loading">Error loading data</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
 </resources>
