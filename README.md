@@ -85,7 +85,3 @@ The app fetches todo data from: `https://jsonplaceholder.typicode.com/todos`
 ```bash
 ./gradlew build
 ```
-
-## License
-
-This project is created for learning purposes.
