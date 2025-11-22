@@ -38,9 +38,6 @@ class SplashFragment : Fragment() {
         // Hide the action bar for splash screen
         (activity as? AppCompatActivity)?.supportActionBar?.hide()
 
-        // Enable full-screen mode with colored status bar
-        setupFullScreenMode()
-
         // Navigate to TodoListFragment after delay
         Handler(Looper.getMainLooper()).postDelayed({
             if (isAdded) { // Check if fragment is still attached
@@ -49,58 +46,12 @@ class SplashFragment : Fragment() {
         }, splashDelayMillis)
     }
 
-    private fun setupFullScreenMode() {
-        activity?.window?.let { window ->
-            // Enable edge-to-edge
-            WindowCompat.setDecorFitsSystemWindows(window, false)
-            
-            // Set status bar color to match splash background
-            window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.splash_background)
-            
-            // Set navigation bar color to match splash background
-            window.navigationBarColor = ContextCompat.getColor(requireContext(), R.color.splash_background)
-            
-            // Make status bar icons light colored (for dark background)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                WindowCompat.getInsetsController(window, window.decorView)?.isAppearanceLightStatusBars = false
-            }
-            
-            // Make navigation bar icons light colored
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                WindowCompat.getInsetsController(window, window.decorView)?.isAppearanceLightNavigationBars = false
-            }
-        }
-        
-        // Apply window insets to make content go edge-to-edge
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
-            // Don't apply any padding - let content go edge-to-edge
-            insets
-        }
-    }
 
-    private fun restoreSystemUI() {
-        activity?.window?.let { window ->
-            // Restore normal window behavior
-            WindowCompat.setDecorFitsSystemWindows(window, true)
-            
-            // Reset status bar color to default (you may need to adjust this to match your theme)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                window.statusBarColor = ContextCompat.getColor(requireContext(), android.R.color.transparent)
-            }
-            
-            // Reset navigation bar color
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                window.navigationBarColor = ContextCompat.getColor(requireContext(), android.R.color.white)
-            }
-        }
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
         // Restore the action bar when leaving splash screen
         (activity as? AppCompatActivity)?.supportActionBar?.show()
-        // Restore system UI
-        restoreSystemUI()
         _binding = null
     }
 }
