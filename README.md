@@ -62,20 +62,6 @@ app/src/main/java/com/getgifted/todoapp/
 - **SwipeRefreshLayout** - Pull to refresh
 - **Material Design Components** - UI components
 
-## Requirements
-
-- Android Studio Arctic Fox or later
-- Minimum SDK: 24 (Android 7.0)
-- Target SDK: 36
-- Kotlin 1.9+
-
-## Setup
-
-1. Clone the repository
-2. Open the project in Android Studio
-3. Sync Gradle files
-4. Run the app on an emulator or physical device
-
 ## API
 
 The app fetches todo data from: `https://jsonplaceholder.typicode.com/todos`
